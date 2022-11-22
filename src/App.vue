@@ -1,5 +1,5 @@
 <template>
-    <div class="vue">vue</div>
+    <div class="vue">vuasde</div>
 </template>
 
 <script>
@@ -8,6 +8,9 @@ export default {
         return {
 
         }
+    },
+    created() {
+        console.log(this)
     }
 }
 </script>
