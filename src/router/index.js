@@ -1,10 +1,11 @@
+import Vue from 'vue'
 import VueRouter from 'vue-router'
-const router = [
+Vue.use(VueRouter)
+const routes = [
     {
-        path: '/header',
-        name: 'header',
-        component: () => require('@/header')
+        path: '/',
+        component: () => import('@/header')
     }
 ]
 
-export default new VueRouter({router})
+export default new VueRouter({routes})
