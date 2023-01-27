@@ -1,16 +1,22 @@
+const config = require('./config/config.json')
+
 module.exports = {
     devServer: {
-        port: 7007,
+        port: 7070,
         host: 'localhost',
         open: true,
+        proxy: {
+            '/api': {
+                target: 'http://localhost:3000',
+                wx: false,
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/api': ''
+                }
+            }
+        }
     },
     configureWebpack: {
-        module: {
-            rules: [{
-                test: /\.mjs$/,
-                include: /node_modules/,
-                type: 'javascript/auto'
-            }]
-        }
-    }
+        name: config.name,
+    },
 }

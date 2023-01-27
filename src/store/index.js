@@ -3,9 +3,19 @@ import vuex from 'vuex'
 vue.use(vuex)
 export default new vuex.Store({
     state: {
-        count: 123
+        tabList: []
     },
     getters: {},
-    mutations: {},
-    actions: {}
+    mutations: {
+        SET_TABLIST({tabList},info) {
+            if(tabList.includes(info)) return
+            tabList.push(info)
+        }
+    },
+    actions: {
+        setTabList({commit},info) {
+            commit('SET_TABLIST', info)
+
+        }
+    }
 })

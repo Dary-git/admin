@@ -1,5 +1,5 @@
 <template>
-    <router-view></router-view>
+    <div class="imageView">imageView</div>
 </template>
 
 <script>
@@ -9,10 +9,9 @@ export default {
 
         }
     },
-    created() {
-    }
 }
 </script>
 
 <style lang="scss" scoped>
+
 </style>

@@ -1,18 +1,15 @@
 <template>
-    <router-view></router-view>
+    <div class="videoView">videoView</div>
 </template>
 
 <script>
 export default {
     data() {
-        return {
-
-        }
+        return {}
     },
-    created() {
-    }
 }
 </script>
 
 <style lang="scss" scoped>
+
 </style>

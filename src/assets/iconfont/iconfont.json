@@ -1,0 +1,44 @@
+{
+  "id": "2393981",
+  "name": "Dary-Admin",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "695127",
+      "name": "标题",
+      "font_class": "biaoti",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "7708023",
+      "name": "眼睛_开",
+      "font_class": "yanjing_kai",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "18406532",
+      "name": "眼睛-关",
+      "font_class": "yanjing-guan",
+      "unicode": "e6fa",
+      "unicode_decimal": 59130
+    },
+    {
+      "icon_id": "6446243",
+      "name": "密码（开）",
+      "font_class": "tianchongxing-",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "6446244",
+      "name": "密码（关）",
+      "font_class": "tianchongxing-1",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    }
+  ]
+}

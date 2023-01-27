@@ -1,5 +1,5 @@
 <template>
-    <router-view></router-view>
+    <div class="echartView2">echartView2</div>
 </template>
 
 <script>
@@ -9,10 +9,9 @@ export default {
 
         }
     },
-    created() {
-    }
 }
 </script>
 
 <style lang="scss" scoped>
+
 </style>
