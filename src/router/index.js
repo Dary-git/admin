@@ -9,7 +9,7 @@ const routes = [
     }, {
         path: '/index',
         name: 'index',
-        redirect: '/imageView',
+        redirect: '/videoView',
         component: () => import('@/view/index'),
         children: [
             {

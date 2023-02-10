@@ -1,17 +1,17 @@
 <template>
-    <div class="echartView2">echartView2</div>
+  <div class="echartView2" @click="a++">echartView2{{ a }}</div>
 </template>
 
 <script>
 export default {
-    data() {
-        return {
-
-        }
-    },
-}
+  name: "echartView2",
+  data() {
+    return {
+      a: 0,
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-
 </style>

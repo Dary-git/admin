@@ -1,17 +1,17 @@
 <template>
-    <div class="videoView2">videoView2</div>
+  <div class="videoView2" @click="a++">videoView2{{ a }}</div>
 </template>
 
 <script>
 export default {
-    data() {
-        return {
-
-        }
-    },
-}
+  name: "videoView",
+  data() {
+    return {
+      a: 0,
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-
 </style>

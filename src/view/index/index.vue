@@ -1,61 +1,68 @@
 <template>
+  <el-container>
+    <el-header class="header">
+      <headerS></headerS>
+    </el-header>
     <el-container>
-        <el-header class="header">
-            <headerS></headerS>
-        </el-header>
-        <el-container>
-            <el-aside width="200px">
-                <asideS></asideS>
-            </el-aside>
-            <el-main>
-                <el-header class="tab" key="tab" height="auto"><tab></tab></el-header>
-                <keep-alive>
-                    <router-view></router-view>
-                </keep-alive>
-            </el-main>
-        </el-container>
+      <el-aside width="200px">
+        <asideS></asideS>
+      </el-aside>
+      <el-main ref="a">
+        <el-header class="tab" key="tab" height="auto"><tab></tab></el-header>
+        <keep-alive :include="tabList">
+          <router-view></router-view>
+        </keep-alive>
+      </el-main>
     </el-container>
+  </el-container>
 </template>
 
 <script>
-import headerS from './header.vue'
-import asideS from './aside.vue'
-import tab from './tab.vue'
+import { mapState } from "vuex";
+import headerS from "./header.vue";
+import asideS from "./aside.vue";
+import tab from "./tab.vue";
 export default {
-    components: {
-        headerS,
-        asideS,
-        tab
+  components: {
+    headerS,
+    asideS,
+    tab,
+  },
+  computed: {
+    ...mapState(["tabList"]),
+    name() {
+      let name = this.$route.name;
+      return name;
     },
-    data() {
-        return {
-
-        }
-    },
-}
+  },
+  data() {
+    return {};
+  },
+  methods: {},
+};
 </script>
 ``
 <style lang="scss" scoped>
 .el-container {
-    height: 100%;
+  height: 100%;
 }
 
-.el-header {
-    border-bottom: .5px solid gray;
+.header {
+  border-bottom: 0.5px solid gray;
 }
 
 .tab {
-    background: seagreen;
+  border-bottom: 1px solid gray;
 }
 
 .el-aside {
-    overflow: auto;
+  overflow: auto;
+  border-right: 0.5px solid gray;
 }
 
 .el-main {
-    padding-top: 0;
-    padding-left: 0;
-    padding-right: 0;
-    background: rgb(94, 82, 74);
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 </style>

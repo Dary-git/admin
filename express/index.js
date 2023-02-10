@@ -3,6 +3,7 @@ const app = express()
 const fs = require('fs')
 const path = require('path')
 const bodyParser = require('body-parser')
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -29,6 +30,21 @@ app.post('/setUser', (req, res) => {
                 })
             })
         }
+    })
+})
+
+app.get('/getImg', (req, res) => {
+    let files = fs.readdirSync(`${__dirname}/public/img/`)
+    let list = []
+    files.forEach(item => {
+        let obj = {}
+        obj.path = `http://localhost:3000/img/${item}`
+        obj.name = item
+        list.push(obj)
+    })
+    res.send({
+        status: 000,
+        data: list
     })
 })
 
